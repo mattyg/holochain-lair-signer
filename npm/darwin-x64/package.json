@@ -9,7 +9,7 @@
   ],
   "main": "holochain-lair-signer.darwin-x64.node",
   "files": [
-    "test.darwin-x64.node"
+    "holochain-lair-signer.darwin-x64.node"
   ],
   "license": "MIT",
   "engines": {
