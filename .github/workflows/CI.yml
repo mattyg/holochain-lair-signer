@@ -28,10 +28,10 @@ jobs:
           - host: macos-latest
             target: x86_64-apple-darwin
             build: |
-              npm run build
+              yarn build
               strip -x *.node
           - host: windows-latest
-            build: npm run build
+            build: yarn build
             target: x86_64-pc-windows-msvc
           - host: ubuntu-latest
             target: x86_64-unknown-linux-gnu
@@ -41,7 +41,7 @@ jobs:
               export OPENSSL_LIB_DIR="/usr/lib/x86_64-linux-gnu";
               export OPENSSL_INCLUDE="/usr/include/openssl";
               set -e &&
-              npm run build &&
+              yarn build &&
               strip *.node
     name: stable - ${{ matrix.settings.target }} - node@18
     runs-on: ${{ matrix.settings.host }}
@@ -53,7 +53,7 @@ jobs:
         with:
           node-version: 18
           check-latest: true
-          cache: npm
+          cache: yarn
       - name: Install
         uses: dtolnay/rust-toolchain@stable
         if: ${{ !matrix.settings.docker }}
@@ -80,10 +80,10 @@ jobs:
         shell: bash
       - name: Setup node x86
         if: matrix.settings.target == 'i686-pc-windows-msvc'
-        run: npm config set supportedArchitectures.cpu "ia32"
+        run: yarn config set supportedArchitectures.cpu "ia32"
         shell: bash
       - name: Install dependencies
-        run: npm install
+        run: yarn install
       - name: Setup node x86
         uses: actions/setup-node@v3
         if: matrix.settings.target == 'i686-pc-windows-msvc'
@@ -135,7 +135,7 @@ jobs:
           check-latest: true
           cache: npm
       - name: Install dependencies
-        run: npm install
+        run: yarn install
       - name: Download artifacts
         uses: actions/download-artifact@v3
         with:
@@ -145,7 +145,7 @@ jobs:
         run: ls -R .
         shell: bash
       - name: Test bindings
-        run: npm run test
+        run: yarn test
   test-linux-x64-gnu-binding:
     name: Test bindings on Linux-x64-gnu - node@${{ matrix.node }}
     needs:
@@ -165,9 +165,9 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
           check-latest: true
-          cache: npm
+          cache: yarn
       - name: Install dependencies
-        run: npm install
+        run: yarn install
       - name: Download artifacts
         uses: actions/download-artifact@v3
         with:
@@ -177,7 +177,7 @@ jobs:
         run: ls -R .
         shell: bash
       - name: Test bindings
-        run: docker run --rm -v $(pwd):/build -w /build node:${{ matrix.node }}-slim npm run test
+        run: docker run --rm -v $(pwd):/build -w /build node:${{ matrix.node }}-slim yarn test
   publish:
     name: Publish
     runs-on: ubuntu-latest
@@ -191,29 +191,29 @@ jobs:
         with:
           node-version: 18
           check-latest: true
-          cache: npm
+          cache: yarn
       - name: Install dependencies
-        run: npm install
+        run: yarn install
       - name: Download all artifacts
         uses: actions/download-artifact@v3
         with:
           path: artifacts
       - name: Move artifacts
-        run: npm run artifacts
+        run: yarn artifacts
       - name: List packages
         run: ls -R ./npm
         shell: bash
       - name: Publish
         run: |
-          npm config set provenance true
+          yarn config set provenance true
           if git log -1 --pretty=%B | grep "^[0-9]\+\.[0-9]\+\.[0-9]\+$";
           then
             echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
-            npm publish --access public
+            yarn publish --access public
           elif git log -1 --pretty=%B | grep "^[0-9]\+\.[0-9]\+\.[0-9]\+";
           then
             echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
-            npm publish --tag next --access public
+            yarn publish --tag next --access public
           else
             echo "Not a release, skipping publish"
           fi
