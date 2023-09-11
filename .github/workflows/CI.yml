@@ -50,7 +50,7 @@ jobs:
         with:
           node-version: 18
           check-latest: true
-          cache: npm install
+          cache: npm
       - name: Install
         uses: dtolnay/rust-toolchain@stable
         if: ${{ !matrix.settings.docker }}
