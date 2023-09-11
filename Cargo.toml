@@ -1,0 +1,24 @@
+[package]
+edition = "2021"
+name = "holochain-lair-signer"
+version = "0.0.0"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+# Default enable napi4 feature, see https://nodejs.org/api/n-api.html#node-api-version-matrix
+napi = { version = "2.12.2", default-features = false, features = ["napi4", "tokio_rt", "async", "serde-json"] }
+napi-derive = "2.12.2"
+lair_keystore_api = "=0.2.4"
+holochain_types = "=0.2.1"
+holochain_zome_types = "0.2.1"
+holochain_client = "=0.4.1"
+holochain_conductor_api = "=0.2.1"
+sodoken = "=0.0.9"
+
+[build-dependencies]
+napi-build = "2.0.1"
+
+[profile.release]
+lto = true
