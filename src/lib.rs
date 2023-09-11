@@ -7,8 +7,7 @@ use std::ops::Deref;
 
 use napi::Result;
 use lair_keystore_api::{ipc_keystore::ipc_keystore_connect, dependencies::url::Url};
-use holochain_types::prelude::ZomeCallUnsigned;
-use holochain_zome_types::Signature;
+use holochain_zome_types::{ZomeCallUnsigned, Signature};
 use sodoken::BufRead;
 
 mod types;

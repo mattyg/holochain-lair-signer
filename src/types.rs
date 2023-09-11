@@ -1,5 +1,8 @@
-use holochain_types::prelude::{ZomeCallUnsigned, Timestamp, CellId, ZomeName, FunctionName, DnaHash, AgentPubKey};
-use holochain_zome_types::{ExternIO, CapSecret};
+use kitsune_p2p_timestamp::Timestamp;
+use holochain_zome_types::CellId;
+use holochain_integrity_types::{ZomeName, FunctionName};
+use holo_hash::{DnaHash, AgentPubKey};
+use holochain_zome_types::{ExternIO, CapSecret, ZomeCallUnsigned};
 use crate::utils::*;
 
 #[derive(Clone)]
