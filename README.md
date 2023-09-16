@@ -6,6 +6,8 @@ It uses napi-rs to wrap a native rust binary which calls the lair keystore via h
 
 Note that napi-rs deseralizes incoming function names and arguments from camelCase to snake_case, and serializes the outgoing response to camelCase.
 
+## Compatibility
+This version is compatible with Lair Keystore 0.2.X
 
 ## Usage
 ```typescript
