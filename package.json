@@ -27,10 +27,5 @@
     "universal": "napi universal",
     "version": "napi version"
   },
-  "packageManager": "yarn@3.6.3",
-  "optionalDependencies": {
-    "holochain-lair-signer-win32-x64-msvc": "1.0.0",
-    "holochain-lair-signer-darwin-x64": "1.0.0",
-    "holochain-lair-signer-linux-x64-gnu": "1.0.0"
-  }
+  "packageManager": "yarn@3.6.3"
 }
