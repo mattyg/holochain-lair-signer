@@ -252,6 +252,6 @@ if (!nativeBinding) {
   throw new Error(`Failed to load native binding`)
 }
 
-const { signZomeCallWithClient } = nativeBinding
+const { ZomeCallSigner } = nativeBinding
 
-module.exports.signZomeCallWithClient = signZomeCallWithClient
+module.exports.ZomeCallSigner = ZomeCallSigner

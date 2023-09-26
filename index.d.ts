@@ -24,4 +24,9 @@ export interface ZomeCallNapi {
   expiresAt: number
   signature: Array<number>
 }
-export function signZomeCallWithClient(zomeCallUnsignedJs: ZomeCallUnsignedNapi, connectionUrl: string, passphrase: string): Promise<ZomeCallNapi>
+export type JsZomeCallSigner = ZomeCallSigner
+export class ZomeCallSigner {
+  constructor()
+  static connect(connectionUrl: string, passphrase: string): Promise<ZomeCallSigner>
+  signZomeCall(zomeCallUnsignedJs: ZomeCallUnsignedNapi): Promise<ZomeCallNapi>
+}
