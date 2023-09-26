@@ -11,9 +11,15 @@ This version is compatible with Lair Keystore 0.2.X
 
 ## Usage
 ```typescript
-import { signZomeCallWithClient, ZomeCallUnsignedNapi, ZomeCallNapi } from "holochain-lair-signer";
+import { ZomeCallSigner, ZomeCallUnsignedNapi, ZomeCallNapi } from "holochain-lair-signer";
+
+let signer;
+export const setupSigner = async (lair_url, password) => {
+  signer = await ZomeCallSigner.connect(lair_url, password);
+};
 
 export const signZomeCall = async (request: CallZomeRequest) => {
+  if(!signer) throw Error("Must setup signer");
 
   const zomeCallUnsignedNapi ZomeCallUnsignedNapi = {
     provenance: Array.from(request.provenance),
@@ -26,7 +32,7 @@ export const signZomeCall = async (request: CallZomeRequest) => {
   };
 
   const zomeCallSignedNapi: ZomeCallNapi =
-    await signZomeCall(zomeCallUnsignedNapi);
+    await signer.signZomeCall(zomeCallUnsignedNapi);
 
   const zomeCallSigned: CallZomeRequestSigned = {
     provenance: Uint8Array.from(zomeCallSignedNapi.provenance),
