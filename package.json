@@ -41,21 +41,5 @@
     "universal": "napi universal",
     "version": "napi version"
   },
-  "packageManager": "yarn@4.0.2",
-  "optionalDependencies": {
-    "holochain-lair-signer-win32-x64-msvc": "0.1.1",
-    "holochain-lair-signer-darwin-x64": "0.1.1",
-    "holochain-lair-signer-linux-x64-gnu": "0.1.1",
-    "holochain-lair-signer-darwin-arm64": "0.1.1",
-    "holochain-lair-signer-android-arm64": "0.1.1",
-    "holochain-lair-signer-linux-arm64-gnu": "0.1.1",
-    "holochain-lair-signer-linux-arm64-musl": "0.1.1",
-    "holochain-lair-signer-win32-arm64-msvc": "0.1.1",
-    "holochain-lair-signer-linux-arm-gnueabihf": "0.1.1",
-    "holochain-lair-signer-linux-x64-musl": "0.1.1",
-    "holochain-lair-signer-freebsd-x64": "0.1.1",
-    "holochain-lair-signer-win32-ia32-msvc": "0.1.1",
-    "holochain-lair-signer-android-arm-eabi": "0.1.1",
-    "holochain-lair-signer-darwin-universal": "0.1.1"
-  }
+  "packageManager": "yarn@4.0.2"
 }
