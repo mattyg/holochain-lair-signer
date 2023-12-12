@@ -1,5 +1,5 @@
 {
-  "name": "holochain-lair-signer-linux-x64-gnu",
+  "name": "holochain-lair-signer-linux-x64-musl",
   "version": "0.1.1",
   "os": [
     "linux"
@@ -7,15 +7,15 @@
   "cpu": [
     "x64"
   ],
-  "main": "holochain-lair-signer.linux-x64-gnu.node",
+  "main": "holochain-lair-signer.linux-x64-musl.node",
   "files": [
-    "holochain-lair-signer.linux-x64-gnu.node"
+    "holochain-lair-signer.linux-x64-musl.node"
   ],
   "license": "MIT",
   "engines": {
     "node": ">= 10"
   },
   "libc": [
-    "glibc"
+    "musl"
   ]
 }
