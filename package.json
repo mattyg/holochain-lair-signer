@@ -5,7 +5,12 @@
   "types": "index.d.ts",
   "napi": {
     "name": "holochain-lair-signer",
-    "triples": {}
+    "triples": {
+      "defaults": true,
+      "additional": [
+        "arm64-darwin"
+      ]
+    }
   },
   "license": "MIT",
   "devDependencies": {
@@ -27,5 +32,11 @@
     "universal": "napi universal",
     "version": "napi version"
   },
-  "packageManager": "yarn@3.6.3"
+  "packageManager": "yarn@3.6.3",
+  "optionalDependencies": {
+    "holochain-lair-signer-win32-x64-msvc": "0.1.0",
+    "holochain-lair-signer-darwin-x64": "0.1.0",
+    "holochain-lair-signer-linux-x64-gnu": "0.1.0",
+    "holochain-lair-signer-darwin-arm64": "0.1.0"
+  }
 }
