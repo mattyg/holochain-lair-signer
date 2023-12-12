@@ -2,12 +2,28 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.1.1] - 2023-12-12
+
+### Miscellaneous Tasks
+
+- Build & ci for all available napi-rs targets
+- Git cliff config
+
+### Build
+
+- Add napi build for arm64-darwin
+- Bump version 0.1.1
+
 ## [0.1.0] - 2023-09-26
 
 ### Documentation
 
 - Readme
 - Lair version in readme
+
+### Miscellaneous Tasks
+
+- Release 0.1.0 with changelog
 
 ### Refactor
 
