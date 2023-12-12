@@ -1,15 +1,26 @@
 {
   "name": "holochain-lair-signer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "index.js",
   "types": "index.d.ts",
   "napi": {
     "name": "holochain-lair-signer",
-    "triples": {}
+    "triples": {
+      "additional": [
+        "aarch64-apple-darwin",
+        "aarch64-linux-android",
+        "aarch64-unknown-linux-musl",
+        "armv7-unknown-linux-gnueabihf",
+        "x86_64-unknown-freebsd",
+        "i686-pc-windows-msvc",
+        "armv7-linux-androideabi",
+        "universal-apple-darwin"
+      ]
+    }
   },
   "license": "MIT",
   "devDependencies": {
-    "@napi-rs/cli": "^2.16.3",
+    "@napi-rs/cli": "^2.17.0",
     "ava": "^5.1.1"
   },
   "ava": {
@@ -27,5 +38,5 @@
     "universal": "napi universal",
     "version": "napi version"
   },
-  "packageManager": "yarn@3.6.3"
+  "packageManager": "yarn@4.0.2"
 }

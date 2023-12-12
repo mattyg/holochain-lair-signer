@@ -1,0 +1,15 @@
+{
+  "name": "holochain-lair-signer-darwin-universal",
+  "version": "0.1.1",
+  "os": [
+    "darwin"
+  ],
+  "main": "holochain-lair-signer.darwin-universal.node",
+  "files": [
+    "holochain-lair-signer.darwin-universal.node"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">= 10"
+  }
+}

@@ -19,12 +19,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@napi-rs/cli@npm:^2.16.3":
-  version: 2.16.3
-  resolution: "@napi-rs/cli@npm:2.16.3"
+"@napi-rs/cli@npm:^2.17.0":
+  version: 2.17.0
+  resolution: "@napi-rs/cli@npm:2.17.0"
   bin:
     napi: scripts/index.js
-  checksum: 11f78b09548bc5c22df56e4fab4a87b68c2d3f2a18a55cf11e775e6a4cb5739ec0e21a14e614db2cdc2b9773cb42536c6bd00c3f85d3b461f956594f8a89ddcb
+  checksum: f86f5e2ecea589605dd245e647f5de9e60b533911ad3ef59b8c92cddbb9e127696b1d21255c50a857a8a4212418ba0a91800d6051aeffe4380720cda66961a63
   languageName: node
   linkType: hard
 
@@ -902,7 +902,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "holochain-lair-signer@workspace:."
   dependencies:
-    "@napi-rs/cli": ^2.16.3
+    "@napi-rs/cli": ^2.17.0
     ava: ^5.1.1
   languageName: unknown
   linkType: soft
