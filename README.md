@@ -9,6 +9,7 @@ Note that napi-rs deseralizes incoming function names and arguments from camelCa
 ## Compatibility
 This version is compatible with Lair Keystore 0.2.X
 
+
 ## Usage
 ```typescript
 import { ZomeCallSigner, ZomeCallUnsignedNapi, ZomeCallNapi } from "holochain-lair-signer";
