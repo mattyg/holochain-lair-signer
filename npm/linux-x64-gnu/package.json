@@ -17,5 +17,10 @@
   },
   "libc": [
     "glibc"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mattyg/holochain-lair-signer",
+    "directory": "npm/linux-x64-gnu"
+  }
 }
