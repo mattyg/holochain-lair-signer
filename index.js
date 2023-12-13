@@ -255,4 +255,3 @@ if (!nativeBinding) {
 const { ZomeCallSigner } = nativeBinding
 
 module.exports.ZomeCallSigner = ZomeCallSigner
-
