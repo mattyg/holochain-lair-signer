@@ -2,17 +2,36 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.1.2] - 2024-01-18
+
+### Miscellaneous Tasks
+
+- Revert removing optionalDependencies
+
 ## [0.1.1] - 2023-12-12
 
 ### Miscellaneous Tasks
 
 - Build & ci for all available napi-rs targets
 - Git cliff config
+- Changelog
+- Add all build targets as optionalDependency
+- Use latest napi workflow generator
+- Remove optionalDependencies
+- Version typo
+- Yarn lock
+- Invalid workflow
+- Trigger build
+- Trigger build
 
 ### Build
 
 - Add napi build for arm64-darwin
 - Bump version 0.1.1
+- Bump optionalDependency versions
+- Remove failing targets
+- Remove more failing targets
+- Remove more failing targets
 
 ## [0.1.0] - 2023-09-26
 
